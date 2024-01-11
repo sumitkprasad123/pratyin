@@ -1,0 +1,168 @@
+.container{
+     box-sizing: content-box;
+     width:100%;
+     height:50px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     padding: 5px 0;
+     position: sticky;
+     top:0;
+     z-index: 999;
+     background-color:white;
+
+    .navbar{
+        width:95%;
+        display: flex;
+        justify-content: space-between;
+
+        .nav_left{
+            display: flex;
+            align-items: center;
+            gap:50px; 
+
+            .img_logo{
+                width:max-content;
+                height:40px;
+                cursor: pointer;
+            }
+
+            .menu_logo{
+                 background-color: #3D5EE1;
+                 color:white;
+                 height:40px;
+                 width:40px;
+                 border-radius: 8px;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 cursor: pointer;
+
+                .menu_icon{
+                    font-weight: bolder;
+                    height:40px;
+                }
+            }
+
+            .search{
+                  border:1px solid #D7D9DE;
+                  background-color: #F5F5F5;
+                  border-radius: 8px;
+                  height:40px;
+                  width:300px;
+                  display: flex;
+                  align-items: center;
+                  gap:5px;
+                  padding: 0 10px;
+
+                .search_icon{
+                    width:10%;
+                    color: #6c757d;
+                }
+
+                .search_input{
+                    border:none;
+                    background-color: #F5F5F5;
+                    color: #6c757d;
+                    width:80%;
+                    font-size:15px ;
+                }
+                & :focus{
+                  outline: none;
+                }
+            }
+        }
+
+        .nav_right{
+            display: flex;
+            align-items: center;
+            gap:20px; 
+
+            .link{
+                background-color: #F7F7FA;
+                 height:40px;
+                 width:40px;
+                 border-radius: 50%;
+                 overflow: hidden;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+
+                .link_img{
+                  width:fit-content;
+                  height:20px;
+                  width:20px; 
+                  border-radius: 50%;
+                  cursor: pointer;
+                } 
+                .link_icon{
+                    height:22px;
+                    width:22px;
+                    color: #6c757d;
+                    cursor: pointer;
+                }
+            }& :hover{
+                background-color: white;
+             }
+
+
+            .user_profile{
+                display: flex;
+                align-items: center;
+                gap:10px;
+                height:38px;
+                position: relative;
+
+                .user_img_box{
+                    box-sizing: content-box;
+                    border:2px solid #b1b8bf;
+                    border-radius: 50%;
+                    height:35px;
+                    width:35px;
+                    padding: 3px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    
+                    .user_img{
+                        width:fit-content;
+                        border-radius: 50%;
+                        height:34px;
+                        width:34px;
+                    }
+                    
+                }
+
+                .user_info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-items: start;
+                    gap:1px;
+                    font-family: Roboto;
+
+                    .user_name{
+                        color:black;
+                        font-weight: bold;
+                    }
+                    .user_auth{
+                        color:blue;
+                        font-size:14px; ;
+                    }
+                }
+
+                .drop_icon{
+                    font-weight: 200;
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes example {
+    from {top:100px;}
+    to {top:50px;}
+  }
