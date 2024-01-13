@@ -1,7 +1,7 @@
 .side_container{
     background-color: white;
     flex:2;
-    padding:15px 0px 15px 15px;
+    padding:0px 0px 15px 15px;
     height:calc(100vh - 50px);
     position: sticky;
     top: 50px;
@@ -36,26 +36,31 @@
             color: #949090;
             margin:25px 0px 0 0;
         }
+         
+        .link{
+            text-decoration: none;
+       
 
         .submenu_list{
             margin-top: 3px;
-            padding: 10px 10px;
+            padding: 10px 10px 10px 25px;
             color:#6f6f6f;
             &:hover{
                 border-radius: 5px;
                 background-color: #3D5EE1;
                 color:white;
                 font-size: 17px;
-                padding-left: 15px;
+                padding-left: 25px;
             }  
         }& .active{
             border-radius: 5px;
             background-color: #3D5EE1;
             color:white;
             font-size: 17px;
-            padding-left: 15px;
+            padding-left: 25px;
         }
         
-    }
-  } 
+     }
+   } 
+ }
 }

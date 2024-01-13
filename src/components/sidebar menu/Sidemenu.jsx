@@ -1,6 +1,7 @@
 import "./sidemenu.scss";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
+import { Link } from "react-router-dom";
 
 const Sidemenu = ({data,handleTitle,handleMenu,menu,active}) => {
    
@@ -60,12 +61,15 @@ const Sidemenu = ({data,handleTitle,handleMenu,menu,active}) => {
                 
                     <AccordionDetails  sx={{ display:`${item.subTitle.length===0?"none":""}`,}}>
                         {item.subTitle && item.subTitle.map((el,ind)=>{
-                           return<div
-                              key={ind} 
-                              onClick={()=>handleTitle(item.title,`${i+1}${el}${ind+1}`)} 
-                              className={active===`${i+1}${el}${ind+1}`?"submenu_list active":"submenu_list"}
-                             >{el}</div>
-                        })}
+                           return<Link to={el} className="link">
+                                    <div
+                                        key={ind} 
+                                        onClick={()=>handleTitle(item.title,`${i+1}${el}${ind+1}`)} 
+                                        className={active===`${i+1}${el}${ind+1}`?"submenu_list active":"submenu_list"}
+                                    >{el}</div>
+                                </Link>
+                            })
+                        }
                     </AccordionDetails>
               
                 </Accordion>
