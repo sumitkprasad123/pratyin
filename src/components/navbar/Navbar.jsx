@@ -25,7 +25,7 @@ const Navbar = () => {
             </div>
             <div className="nav_right">
                 <div className="link">
-                   <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" fill alt="pic" className='link_img'/>
+                   <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg"  alt="pic" className='link_img'/>
                 </div>
                 <div className="link">
                    <NotificationsNoneIcon className='link_icon'/>

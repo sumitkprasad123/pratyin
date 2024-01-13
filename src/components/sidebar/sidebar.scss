@@ -1,18 +1,17 @@
 .side_container{
-    // border:1px solid black;
+    background-color: white;
     flex:2;
-    padding:15px 5px 15px 15px;
-
+    padding:15px 0px 15px 15px;
     height:calc(100vh - 50px);
     position: sticky;
     top: 50px;
+    overflow-x:hidden;
+    overflow-y:hidden;
     &:hover{
-        
 
         overflow-y: scroll;
         &::-webkit-scrollbar{
             width:7px;
-            height:150px;
         }
         &::-webkit-scrollbar-track{
             background-color: white;
@@ -24,49 +23,39 @@
     }
 
     .sidebar{
-        // border:1px solid black;
         display: flex;
         flex-direction: column;
-        gap:25px;
-       
 
+        .side_menu{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+         
         .sidebar_menu_title{
             font-size: 16px;
             color: #949090;
+            margin:25px 0px 0 0;
         }
-        .a{
-            border:none;
-        }
-        .sidebar_submenu{
-            //  border:1px solid black;
-             display: flex;
-             align-items: center;
-             gap:15px;
-             cursor: pointer;
 
-            .logo{
-                height:20px;
-                width:10%;
-                color:#6f6f6f;
-            }
-            .sidebar_content{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width:80%;
-                font-size: 16px;
-                color:#6f6f6f;
-                 
-                .sidebar_title{}
-                .sidebar_icon{
-                    color:#6f6f6f;
-                }
-            }&:hover{
-                margin-right: 10px;
-                transition: 0.1s ease all;
-                color:blue;
-             }
+        .submenu_list{
+            margin-top: 3px;
+            padding: 10px 10px;
+            color:#6f6f6f;
+            &:hover{
+                border-radius: 5px;
+                background-color: #3D5EE1;
+                color:white;
+                font-size: 17px;
+                padding-left: 15px;
+            }  
+        }& .active{
+            border-radius: 5px;
+            background-color: #3D5EE1;
+            color:white;
+            font-size: 17px;
+            padding-left: 15px;
         }
+        
     }
-   
+  } 
 }
