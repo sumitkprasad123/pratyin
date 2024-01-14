@@ -2,11 +2,317 @@
     // border:1px solid black;
     flex: 10.5;
     background-color: #f7f7fa;
-    height:calc(100vh - 50px);
+    height:auto;
     position: sticky;
     top: 50px;
-    
-   .student{
-    
-   }
+    display: flex;
+    justify-content: center;
+    padding:25px;
+
+    .student{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        
+        .student_title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .title{
+                font-size: 25px;
+                color:black
+            }
+            .home_link{
+                font-size: 16px;
+                color:rgb(26, 25, 25);
+                text-decoration: none;
+            }
+        }
+
+        .total_review{
+             display: grid;
+             grid-template-columns: repeat(4,1fr);
+             gap:20px;
+
+            .total_review_container{
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                padding: 20px 35px;
+
+                .total_review_data{
+                    display: flex;
+                    flex-direction: column;
+                    gap:10px;
+
+                    .course{
+                        font-size: 14px;
+                        color: #808191;
+                        margin-bottom: 5px;
+                    }
+                    .course_data{
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: #000;
+                        margin-bottom: 0;
+                    }
+                }
+                .img_box{
+                    padding: 2px;
+                    background-color:rgb(241, 249, 249) ;
+
+                    .total_review_img{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                
+            }
+
+        }
+
+        .student_detail_container{
+            // border:1px solid red;
+            display:flex;
+            gap:20px;
+
+            .student_detail_left{
+                flex:4;
+                padding:10px;
+                display: flex;
+                flex-direction: column;
+                gap:30px;
+
+                .lesson{
+                    background-color: white;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap:10px;
+                    padding: 15px;
+
+                    .lesson_top{
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .lesson_top_title{
+                            font-size: 20px;
+                            font-weight: 500;
+                            color:black;
+                        }
+                        .lesson_nav{
+                             display:flex ;
+                             align-items: center;
+                             gap:10px;
+
+                            .lesson_nav_dot{
+                                 height:8px;
+                                 width:8px;
+                                 background-color: #808191;
+                                 border-radius: 50%;
+
+                            }& .active{
+                                background-color: blue;
+                            }
+                            .lesson_nav_title{
+                               font-size: 14px;
+                               font-weight: 500;
+                               color:blue;
+                            }
+                            .lesson_nav_vertical_logo{
+                                font-size: 30px;
+                            }
+                        }
+                    }
+
+                    .lesson_bottom{
+                        display: flex;
+                        .lesson_percentage{
+                            flex:2;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .lesson_info{
+                            flex:5;
+                            display: grid;
+                            grid-template-columns:repeat(2,1fr);
+                            gap:10px;
+
+                            .lesson_info_item{
+                                display: flex;
+                                gap:10px;
+
+                                .lesson_info_img{
+                                    color:#cccccc;
+                                }
+                                .lesson_info_detail{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap:1px;
+                                    .lesson_info_detail_type{
+                                        font-size: 14px;
+                                        color:#969191;
+                                    }
+                                    .lesson_info_detail_data{
+                                        font-size: 16px;
+                                        color:black;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                        .lesson_btn{
+                            flex:2;
+                            margin: auto;
+
+                            .skip_btn{
+                                margin-top: 20px;
+                                text-align: center;
+                                &:hover{
+                                    padding:10px 15px;
+                                    background-color: #3d5ee1;
+                                    color:white;
+                                    border-radius: 8px;
+                                }
+                            }
+                            .continue_btn{
+                                margin-top: 20px;
+                                text-align: center;
+                                padding:10px 15px;
+                                background-color: #3d5ee1;
+                                color:white;
+                                border-radius: 8px;
+                                &:hover{
+                                    padding:10px 15px;
+                                    background-color: #3d5ee1;
+                                    color:white;
+                                    border-radius: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .l_activity{
+                     display: flex;
+                     flex-direction: column;
+                     gap:10px;
+                     padding:20px;
+                     background-color: white;
+                     
+                    .l_activity_heading{
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+
+                        .left{
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                        .right{
+                            display: flex;
+                            align-items: center;
+                            gap:10px;
+                            .dot1{
+                                height:8px;
+                                width:8px;
+                                background-color:  #3d5ee1;
+                                border-radius: 50%;
+                            }
+                            .dot2{
+                                height:8px;
+                                width:8px;
+                                background-color:rgb(109, 230, 230);
+                                border-radius: 50%;
+                            }
+                            .name1{
+                                font-size: 13px;
+                            }
+                            .name2{
+                                font-size: 13px;
+                            }
+                            .title_icon{
+                                cursor: pointer;
+                            }
+                            
+                            
+                        }
+                    }
+                    .l_activity_chart{
+                        margin-top: 30px;
+                        
+                    }
+                }
+
+                .t_history{
+                    display: flex;
+                    flex-direction: column;
+                    gap:20px;
+                    padding: 20px;
+                    background-color: white;
+
+                    .t_history_title{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .heading{
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                        .title_icon{}
+                    }
+                }
+            }
+            .student_detail_right{
+                flex:1.8;
+                box-sizing: content-box;
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                background-color: white;
+                padding:30px 30px;
+                border-radius: 20px;
+                margin-top: 10px;
+
+                .clender_title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap:20px;
+                    padding: 20px 0;
+                    .clender_det{
+                        font-size: 20px;
+                        font-weight: 500;
+                        color:#000
+                    }
+                }
+
+                .event{
+                    display: flex;
+                    flex-direction: column;
+                    gap:15px;
+                    margin-top: 10px;
+
+                    .event_time{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 20px;
+
+                        .event_date{
+                            font-size: 17px;
+                            font-weight: 500;
+                            color:#000
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,35 @@
+.chart{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+    .right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+       
+        .dot1{
+            height:14px;
+            width:14px;
+            background-color:  #3d5ee1;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot2{
+            height:14px;
+            width:14px;
+            background-color:rgb(109, 230, 230);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .name1,.name2{
+            font-size: 17px;
+        }
+        .title_icon{
+            cursor: pointer;
+        }
+        
+        
+    }
+}

@@ -1,0 +1,37 @@
+.task_container{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin-top: 10px;
+
+       .task_container_left{
+        display: flex;
+        align-items: center;
+        gap:5px;
+    
+        .task_time{ 
+            color:#747474;
+        }
+        .task_details{
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+            border-left: 5px solid#3D5EE1;
+            margin-left: 10px;
+            padding-left: 10px;
+            
+            .subject{
+                font-size: 15px;
+                color:black;
+            }
+            .content{
+                font-size: 13px;
+                color:#747474;
+            }
+    }
+}
+    .time_duration{
+        font-size: 13px;
+        color:#747474;
+    }
+}
