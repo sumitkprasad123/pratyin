@@ -100,3 +100,14 @@
         }
     }
 }
+
+
+@media screen  and (max-width:768px){
+    .login_container{
+        .login{
+            .login_left{
+                display: none;
+            }
+        }
+    }
+}
