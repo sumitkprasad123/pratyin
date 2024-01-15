@@ -1,10 +1,12 @@
 import "./sidemenu.scss";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ToggleContext } from "../../context/ToggleContext";
 
 const Sidemenu = ({data,handleTitle,handleMenu,menu,active}) => {
-   
+    const {hideMenu,setHideMenu} = useContext(ToggleContext)
   return (
     <>
       {
@@ -54,14 +56,14 @@ const Sidemenu = ({data,handleTitle,handleMenu,menu,active}) => {
                              },
                           }]
                         }
-                        expandIcon={item.subTitle.length!==0? <KeyboardArrowRightIcon />:null}  > 
+                        expandIcon={item.subTitle.length!==0? <KeyboardArrowRightIcon sx={{display:hideMenu?"none":"flex"}} />:null}  > 
                         <Typography  > {item.icone} </Typography>
-                        <Typography  > {item.title} </Typography>
+                        <Typography sx={{display:hideMenu?"none":'hover{display:"flex"}'}} > {item.title} </Typography>
                     </AccordionSummary >
                 
                     <AccordionDetails  sx={{ display:`${item.subTitle.length===0?"none":""}`,}}>
                         {item.subTitle && item.subTitle.map((el,ind)=>{
-                           return<Link to={el} className="link">
+                           return<Link key={ind} to={el} className="link">
                                     <div
                                         key={ind} 
                                         onClick={()=>handleTitle(item.title,`${i+1}${el}${ind+1}`)} 

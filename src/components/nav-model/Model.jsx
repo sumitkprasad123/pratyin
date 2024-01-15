@@ -25,7 +25,7 @@ const Model = () => {
         <Link to="#" className="info">Inbox</Link>
       </div>
       <div className="model_info">
-        <Link to="#" className="info">Logout</Link>
+        <Link to="/login" className="info">Logout</Link>
       </div>
     </div>
   );

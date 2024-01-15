@@ -1,0 +1,96 @@
+.register_container{
+    // border:1px solid black;
+    box-sizing: content-box;
+    width:100%;
+    height:auto;
+    background-color: #ced4da;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    padding: 62px 0;
+
+ .register{
+     // border:1px solid black;
+     height:600px;
+     display: flex;
+     border-radius: 20px;
+     overflow: hidden;  
+     background-color: white;
+
+     .register_left{
+         background-color: rgb(92, 195, 235);
+         border-radius: 20px;
+         flex:1;
+         .login_img{
+             height:100%;
+             width:100%;
+         }
+     }
+     
+     .register_right{
+         flex:1;
+         display: flex;
+         flex-direction: column;
+         gap:10px;
+         padding: 30px;
+         .register_form{
+             display: flex;
+             flex-direction: column;
+             gap:10px;
+            
+             .actual_form{
+                 display: flex;
+                 flex-direction: column;
+                 gap:20px;
+                 margin-top: 20px;
+                 .actual_form_title{
+                     font-size: 28px;
+                     color:black;
+                 }
+                 .register_text{
+                    color:silver;
+                 }
+                 input{
+                     padding: 10px 10px;
+                 }
+                 .checkbox{
+                     display: flex;
+                     gap:10px;
+                    .checkbox_text{
+                        color:silver;
+                    }
+                     .checkbox_link{
+                         text-decoration: none;
+                         color:rgb(92, 195, 235);
+                     }
+                 }
+                 .register_btn{
+                     width: 95%;
+                     text-decoration: none;
+                     background-color: rgb(101, 101, 225);
+                     color:white;
+                     padding: 10px;
+                     text-align: center;
+                     border-radius: 10px;
+                     cursor: pointer;
+
+                     & :hover{
+                        background-color: rgb(92, 195, 235);
+                    }
+                 }
+                 
+             }
+         }
+         .or{
+             text-align: center;
+         }
+         .register_social_media{
+             display: flex;
+             justify-content:center ;
+             align-items: center;
+             gap:10px;
+             cursor: pointer;
+         }
+     }
+ }
+}

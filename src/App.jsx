@@ -7,11 +7,12 @@ import "./app.scss";
 import Student from "./page/dashboard/student dashboard/Student";
 import Admin from "./page/dashboard/admin dashboard/Admin";
 import Teacher from "./page/dashboard/teacher dashboard/Teacher";
+import Register from "./page/register/Register";
 
 function App() {
   const Layout = () => {
     return (
-      <div>
+      <div className="app_container">
         <Navbar/>
         <div className="app">
             <Sidebar/>
@@ -52,7 +53,11 @@ function App() {
     {
       path: "/login",
       element: <Login />,
-    },  
+    }, 
+    {
+      path: "/register",
+      element: <Register/>,
+    }, 
   ]);
 
   return <RouterProvider router={router} />

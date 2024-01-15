@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./lineCharts.scss";
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis,Tooltip } from 'recharts';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const data = [
     {
@@ -48,8 +47,6 @@ const LineCharts = () => {
   <div className="chart">
         <ResponsiveContainer width={"100%"} height={300}>
           <LineChart
-              // width={500}
-              // height={300}
               data={data}
               margin={{
                 top: 5,

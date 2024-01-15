@@ -16,7 +16,7 @@ const Progress = () => {
         clearInterval(timer);
       };
     }, []);
-console.log({"P":progress})
+
     return (
       <Box sx={{
          position: 'relative', display: 'inline-flex',}}>

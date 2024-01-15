@@ -1,88 +1,71 @@
 import React from 'react'
 import "./timeline.scss"
-import { Chrono } from 'react-chrono'
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 const Timeline = () => {
-    const items = [
-         {
-            title: 'Sep23',
-          },
-          {
-            title: 'Sep23',
-          },
-          {
-            title: 'Sep23',
-          },
-       
-
-    ]
+    
   return (
-    <div style={{ width: '100%', height: '350px' }}>
-       <Chrono
-          mode="VERTICAL" 
-          items={items} 
-        //   cardLess={true}
-          cardHeight={1}
-          contentDetailsHeight={"50px"}
-          borderLessCards={true}
-          parseDetailsAsHTML={true}
-          disableClickOnCircle={true}
-          hideControls={true}
-          activeItemIndex={false}
-          lineWidth={1}
-          timelinePointShape="circle"
-        //   disableInteraction={true}
-        //   disableTimelinePoint={true}
-          theme={{
-            cardBgColor: 'transparent',
-            cardBorderColor: 'transparent',
-            cardBoxShadow: 'none',
-            nodeDot: {
-                borderColor: ' blue', 
-                backgroundColor: 'white', 
-              }, 
-          }}
-          style={{ width: '100%', marginLeft: 0, paddingLeft:0}}
-       >
+    <div style={{display:"flex",flexDirection:"column",gap:"10px"}} >
          <div className="t_container">
-            <div className="top">
-                <h1 className='head'>Mathematic</h1>
-                <button className="btn">In Progress</button>
-            </div> 
-            <div className="bottom" >
-                  <DateRangeIcon className='icon'/>
-                  <span className='time'>September 5, 2022 |</span>
-                  <AccessTimeIcon className='icon'/>
-                  <span className='time'>09:00 am - 10:00 am (60 Minutes)</span>
+            <div className="timeline_left">
+                <div className="t_left">
+                    <span className="t_time_text">Sep22</span>
+                </div>
+                <div className="middle_content">
+                    <h3 className='head'>Mathematic</h3>
+                    <div className="bottom" >
+                          <DateRangeIcon className='icon'/>
+                          <span className='time'>September 5, 2022 |</span>
+                          <AccessTimeIcon className='icon'/>
+                          <span className='time'>09:00 am - 10:00 am (60 Minutes)</span>
+                    </div> 
+                    <span className="outer_circle">
+                       <span className="inner_circle"></span>
+                    </span>          
+                </div> 
             </div>
+            <button className="btn_right">In Progress</button>
          </div>
          <div className="t_container">
-            <div className="top">
-                <h1 className='head'>Mathematic</h1>
-                <button className="btn">Completed</button>
-            </div> 
-            <div className="bottom" >
-                  <DateRangeIcon className='icon'/>
-                  <span className='time'>September 5, 2022 |</span>
-                  <AccessTimeIcon className='icon'/>
-                  <span className='time'>09:00 am - 10:00 am (60 Minutes)</span>
+            <div className="timeline_left">
+                <div className="t_left">
+                    <span className="t_time_text">Sep23</span>
+                </div>
+                <div className="middle_content">
+                    <h3 className='head'>Geography</h3>
+                    <div className="bottom" >
+                          <DateRangeIcon className='icon'/>
+                          <span className='time'>September 5, 2022 |</span>
+                          <AccessTimeIcon className='icon'/>
+                          <span className='time'>09:00 am - 10:00 am (60 Minutes)</span>
+                    </div> 
+                    <span className="outer_circle">
+                       <span className="inner_circle"></span>
+                    </span>          
+                </div> 
             </div>
+            <button className="btn_right">Completed</button>
          </div>
          <div className="t_container">
-            <div className="top">
-                <h1 className='head'>Mathematic</h1>
-                <button className="btn">In Progress</button>
-            </div> 
-            <div className="bottom" >
-                  <DateRangeIcon className='icon'/>
-                  <span className='time'>September 5, 2022 |</span>
-                  <AccessTimeIcon className='icon'/>
-                  <span className='time'>09:00 am - 10:00 am (60 Minutes)</span>
+            <div className="timeline_left">
+                <div className="t_left">
+                    <span className="t_time_text">Sep24</span>
+                </div>
+                <div className="middle_content">
+                    <h3 className='head'>Botony</h3>
+                    <div className="bottom" >
+                          <DateRangeIcon className='icon'/>
+                          <span className='time'>September 5, 2022 |</span>
+                          <AccessTimeIcon className='icon'/>
+                          <span className='time'>09:00 am - 10:00 am (60 Minutes)</span>
+                    </div> 
+                    <span className="outer_circle">
+                       <span className="inner_circle"></span>
+                    </span>          
+                </div> 
             </div>
+            <button className="btn_right">In Progress</button>
          </div>
-         
-       </Chrono>
     </div>
   )
 }

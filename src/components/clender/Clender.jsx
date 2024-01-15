@@ -14,10 +14,8 @@ const Clender = () => {
     <Calendar
       onChange={onChange}
       value={date}
-      calendarType="US"
       next2Label={null}
       prev2Label={null}
-      className={{boder:"none"}}
     />
   </div>
   )

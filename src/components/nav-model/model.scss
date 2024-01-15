@@ -10,6 +10,8 @@
     translate: 50px;
     animation-name: example;
     animation-duration: 0.5s;
+    z-index: 9999;
+    background-color: white;
 
     .model_user_profile{
         border-bottom: 1px solid #cccc ;

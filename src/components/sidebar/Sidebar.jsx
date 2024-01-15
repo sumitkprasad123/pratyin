@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./sidebar.scss";
 import GridViewIcon from '@mui/icons-material/GridView';
 import SchoolIcon from '@mui/icons-material/School';
@@ -29,6 +29,7 @@ import TableViewIcon from '@mui/icons-material/TableView';
 import CodeIcon from '@mui/icons-material/Code';
 
 import Sidemenu from '../sidebar menu/Sidemenu';
+import { ToggleContext } from '../../context/ToggleContext';
 
 const sidebardata = [
    {
@@ -226,6 +227,7 @@ const sidebardata = [
 const Sidebar = () => {
 const [menu,setMenu] = useState("Dashboard");
 const [active, setActive] = useState("1Admin Dashboard1")
+const {hideMenu,setHideMenu} = useContext(ToggleContext)
 
 const handleTitle = (item1,item2) => {
     setMenu(item1)
@@ -239,14 +241,14 @@ const handleMenu = (title) => {
  }
 
   return (
-    <div className="side_container">
+    <div className={hideMenu?"side_container hideSidebar":"side_container"}>
       <div className="sidebar" >
 
         { 
           sidebardata.map((menu_data,index) => {
             return (
                 <div key={index} className="side_menu">
-                    <span  className="sidebar_menu_title">{menu_data.menuTitle}</span>
+                    <span  className={hideMenu?"sidebar_menu_title hide_sidebar_menu_title":"sidebar_menu_title"}>{menu_data.menuTitle}</span>
                     <Sidemenu 
                        data={menu_data.data}
                        handleTitle={handleTitle}

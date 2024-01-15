@@ -19,8 +19,12 @@
         .nav_left{
             display: flex;
             align-items: center;
-            gap:50px; 
+            gap:30px; 
+            // justify-content: space-between;
 
+            .hidden_menu_logo{
+                display: none;
+            }
             .img_logo{
                 width:max-content;
                 height:40px;
@@ -30,8 +34,8 @@
             .menu_logo{
                  background-color: #3D5EE1;
                  color:white;
-                 height:40px;
-                 width:40px;
+                 height:35px;
+                 width:80px;
                  border-radius: 8px;
                  display: flex;
                  align-items: center;
@@ -49,11 +53,11 @@
                   background-color: #F5F5F5;
                   border-radius: 8px;
                   height:40px;
-                  width:300px;
+                  width:100%;
                   display: flex;
                   align-items: center;
                   gap:5px;
-                  padding: 0 10px;
+                  padding: 0 50px 0 10px;
 
                 .search_icon{
                     width:10%;
@@ -166,3 +170,62 @@
     from {top:100px;}
     to {top:50px;}
   }
+
+
+
+
+@media screen  and (max-width:992px){
+  .container{
+     .navbar{
+        .nav_left{
+            .hidden_menu_logo{
+                display: flex;
+                background-color: white;  
+
+                .hidden_menu_icon{
+                    font-size: 25px;
+                    color:rgb(62, 150, 185);
+                }   
+            }
+            
+            .menu_logo{
+                display: none;
+            }
+            .search{
+                display: none;
+            }
+        }
+        
+     }
+  }
+
+}
+
+@media screen  and (max-width:768px){
+
+    .container{
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            .nav_left{
+
+            }
+            .nav_right{
+                .link{
+                    display:none;
+                    &.nav_notification{
+                        display: flex;
+                    }
+                }
+                .user_profile{
+                    .user_info{
+                        display: none;
+                    }
+                    .drop_icon{
+                        display: none; 
+                    }
+                }
+            }
+        }
+    }
+}
